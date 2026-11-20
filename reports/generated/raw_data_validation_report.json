@@ -1,0 +1,100 @@
+{
+    "project": "E-Commerce BI and Decision Support System",
+    "validation_timestamp_utc": "2026-11-10T06:21:57.588124+00:00",
+    "total_datasets": 9,
+    "passed_datasets": 9,
+    "failed_datasets": 0,
+    "overall_status": "PASS",
+    "datasets": [
+        {
+            "filename": "olist_orders_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 17654914,
+            "row_count": 99441,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "olist_order_items_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 15438671,
+            "row_count": 112650,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "olist_order_payments_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 5777138,
+            "row_count": 103886,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "olist_order_reviews_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 14451670,
+            "row_count": 99224,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "olist_customers_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 9033957,
+            "row_count": 99441,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "olist_sellers_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 174703,
+            "row_count": 3095,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "olist_products_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 2379446,
+            "row_count": 32951,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "olist_geolocation_dataset.csv",
+            "file_exists": true,
+            "file_size_bytes": 61273883,
+            "row_count": 1000163,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        },
+        {
+            "filename": "product_category_name_translation.csv",
+            "file_exists": true,
+            "file_size_bytes": 2613,
+            "row_count": 71,
+            "missing_columns": [],
+            "unexpected_columns": [],
+            "status": "PASS",
+            "errors": []
+        }
+    ]
+}

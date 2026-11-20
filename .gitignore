@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+
+# Data and databases
+data/staging/*
+data/processed/*
+!data/raw/.gitkeep
+!data/staging/.gitkeep
+!data/processed/.gitkeep
+*.db
+*.sqlite
+
+# Model artifacts and generated outputs
+models/artifacts/*
+!models/artifacts/.gitkeep
+!reports/generated/.gitkeep
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Database temporary files
+*.duckdb.wal
+*.wal
+
+# Power BI binary files (manage separately)
+*.pbix
+*.pbit

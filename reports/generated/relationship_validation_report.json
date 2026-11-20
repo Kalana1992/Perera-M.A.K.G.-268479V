@@ -1,0 +1,112 @@
+{
+    "execution_timestamp": "2026-11-13T06:59:18.001946+00:00",
+    "primary_key_checks": [
+        {
+            "table": "orders",
+            "column": "order_id",
+            "total_rows": 99441,
+            "unique_values": 99441,
+            "null_values": 0,
+            "duplicate_values": 0,
+            "is_valid": true
+        },
+        {
+            "table": "customers",
+            "column": "customer_id",
+            "total_rows": 99441,
+            "unique_values": 99441,
+            "null_values": 0,
+            "duplicate_values": 0,
+            "is_valid": true
+        },
+        {
+            "table": "products",
+            "column": "product_id",
+            "total_rows": 32951,
+            "unique_values": 32951,
+            "null_values": 0,
+            "duplicate_values": 0,
+            "is_valid": true
+        },
+        {
+            "table": "sellers",
+            "column": "seller_id",
+            "total_rows": 3095,
+            "unique_values": 3095,
+            "null_values": 0,
+            "duplicate_values": 0,
+            "is_valid": true
+        },
+        {
+            "table": "order_reviews",
+            "column": "review_id",
+            "total_rows": 99224,
+            "unique_values": 98410,
+            "null_values": 0,
+            "duplicate_values": 814,
+            "is_valid": false
+        }
+    ],
+    "foreign_key_checks": [
+        {
+            "parent_table": "customers",
+            "parent_column": "customer_id",
+            "child_table": "orders",
+            "child_column": "customer_id",
+            "total_child_rows": 99441,
+            "null_values": 0,
+            "unmatched_values": 0,
+            "is_valid": true
+        },
+        {
+            "parent_table": "orders",
+            "parent_column": "order_id",
+            "child_table": "order_items",
+            "child_column": "order_id",
+            "total_child_rows": 112650,
+            "null_values": 0,
+            "unmatched_values": 0,
+            "is_valid": true
+        },
+        {
+            "parent_table": "orders",
+            "parent_column": "order_id",
+            "child_table": "order_payments",
+            "child_column": "order_id",
+            "total_child_rows": 103886,
+            "null_values": 0,
+            "unmatched_values": 0,
+            "is_valid": true
+        },
+        {
+            "parent_table": "orders",
+            "parent_column": "order_id",
+            "child_table": "order_reviews",
+            "child_column": "order_id",
+            "total_child_rows": 99224,
+            "null_values": 0,
+            "unmatched_values": 0,
+            "is_valid": true
+        },
+        {
+            "parent_table": "products",
+            "parent_column": "product_id",
+            "child_table": "order_items",
+            "child_column": "product_id",
+            "total_child_rows": 112650,
+            "null_values": 0,
+            "unmatched_values": 0,
+            "is_valid": true
+        },
+        {
+            "parent_table": "sellers",
+            "parent_column": "seller_id",
+            "child_table": "order_items",
+            "child_column": "seller_id",
+            "total_child_rows": 112650,
+            "null_values": 0,
+            "unmatched_values": 0,
+            "is_valid": true
+        }
+    ]
+}

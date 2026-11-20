@@ -1,0 +1,299 @@
+{
+    "total_tables_expected": 9,
+    "total_tables_found": 9,
+    "passed": 9,
+    "failed": 0,
+    "extra_tables": [],
+    "results": [
+        {
+            "table_name": "orders",
+            "expected_rows": 99441,
+            "actual_rows": 99441,
+            "column_count": 8,
+            "columns": [
+                {
+                    "name": "order_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "customer_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "order_status",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "order_purchase_timestamp",
+                    "data_type": "TIMESTAMP"
+                },
+                {
+                    "name": "order_approved_at",
+                    "data_type": "TIMESTAMP"
+                },
+                {
+                    "name": "order_delivered_carrier_date",
+                    "data_type": "TIMESTAMP"
+                },
+                {
+                    "name": "order_delivered_customer_date",
+                    "data_type": "TIMESTAMP"
+                },
+                {
+                    "name": "order_estimated_delivery_date",
+                    "data_type": "TIMESTAMP"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "order_items",
+            "expected_rows": 112650,
+            "actual_rows": 112650,
+            "column_count": 7,
+            "columns": [
+                {
+                    "name": "order_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "order_item_id",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "product_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "seller_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "shipping_limit_date",
+                    "data_type": "TIMESTAMP"
+                },
+                {
+                    "name": "price",
+                    "data_type": "DOUBLE"
+                },
+                {
+                    "name": "freight_value",
+                    "data_type": "DOUBLE"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "order_payments",
+            "expected_rows": 103886,
+            "actual_rows": 103886,
+            "column_count": 5,
+            "columns": [
+                {
+                    "name": "order_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "payment_sequential",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "payment_type",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "payment_installments",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "payment_value",
+                    "data_type": "DOUBLE"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "order_reviews",
+            "expected_rows": 99224,
+            "actual_rows": 99224,
+            "column_count": 7,
+            "columns": [
+                {
+                    "name": "review_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "order_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "review_score",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "review_comment_title",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "review_comment_message",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "review_creation_date",
+                    "data_type": "TIMESTAMP"
+                },
+                {
+                    "name": "review_answer_timestamp",
+                    "data_type": "TIMESTAMP"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "customers",
+            "expected_rows": 99441,
+            "actual_rows": 99441,
+            "column_count": 5,
+            "columns": [
+                {
+                    "name": "customer_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "customer_unique_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "customer_zip_code_prefix",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "customer_city",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "customer_state",
+                    "data_type": "VARCHAR"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "sellers",
+            "expected_rows": 3095,
+            "actual_rows": 3095,
+            "column_count": 4,
+            "columns": [
+                {
+                    "name": "seller_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "seller_zip_code_prefix",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "seller_city",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "seller_state",
+                    "data_type": "VARCHAR"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "products",
+            "expected_rows": 32951,
+            "actual_rows": 32951,
+            "column_count": 9,
+            "columns": [
+                {
+                    "name": "product_id",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "product_category_name",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "product_name_lenght",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "product_description_lenght",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "product_photos_qty",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "product_weight_g",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "product_length_cm",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "product_height_cm",
+                    "data_type": "BIGINT"
+                },
+                {
+                    "name": "product_width_cm",
+                    "data_type": "BIGINT"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "geolocation",
+            "expected_rows": 1000163,
+            "actual_rows": 1000163,
+            "column_count": 5,
+            "columns": [
+                {
+                    "name": "geolocation_zip_code_prefix",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "geolocation_lat",
+                    "data_type": "DOUBLE"
+                },
+                {
+                    "name": "geolocation_lng",
+                    "data_type": "DOUBLE"
+                },
+                {
+                    "name": "geolocation_city",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "geolocation_state",
+                    "data_type": "VARCHAR"
+                }
+            ],
+            "status": "PASS"
+        },
+        {
+            "table_name": "category_translation",
+            "expected_rows": 71,
+            "actual_rows": 71,
+            "column_count": 2,
+            "columns": [
+                {
+                    "name": "product_category_name",
+                    "data_type": "VARCHAR"
+                },
+                {
+                    "name": "product_category_name_english",
+                    "data_type": "VARCHAR"
+                }
+            ],
+            "status": "PASS"
+        }
+    ],
+    "overall_status": "PASS"
+}

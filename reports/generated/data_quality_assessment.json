@@ -1,0 +1,9 @@
+{
+    "total_order_items": 112650,
+    "missing_purchase_timestamp": 0,
+    "deadlines_before_purchase": 0,
+    "deadlines_over_30_days": 239,
+    "deadlines_over_365_days": 4,
+    "deadlines_after_latest_purchase_date": 4,
+    "exact_duplicate_item_rows": 0
+}
