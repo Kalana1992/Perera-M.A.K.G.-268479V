@@ -1,0 +1,7 @@
+{
+    "model": "Random Forest",
+    "optimal_threshold": 0.32999999999999996,
+    "selection_method": "Maximum OOF F1-score",
+    "cross_validation_folds": 5,
+    "random_state": 42
+}

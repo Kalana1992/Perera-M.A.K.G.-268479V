@@ -1,0 +1,52 @@
+{
+    "model": "Random Forest with Optimized Threshold",
+    "threshold_selection_method": "Maximum F1-score from 5-fold StratifiedGroupKFold OOF predictions",
+    "selected_threshold": 0.32999999999999996,
+    "random_state": 42,
+    "training_records": 77164,
+    "testing_records": 19292,
+    "oof_precision": 0.27732550380355,
+    "oof_recall": 0.39755117658312605,
+    "oof_f1_score": 0.32672955974842766,
+    "test_default_threshold_0_50": {
+        "precision": 0.436,
+        "recall": 0.16679418515684774,
+        "f1_score": 0.24128389596015495
+    },
+    "test_optimized_threshold": {
+        "threshold": 0.32999999999999996,
+        "accuracy": 0.8923906282396848,
+        "precision": 0.2975250131648236,
+        "recall": 0.4322876817138485,
+        "f1_score": 0.35246412975670616,
+        "roc_auc": 0.799223168844053,
+        "pr_auc": 0.28713164710243017,
+        "classification_report": {
+            "0": {
+                "precision": 0.9573391594319554,
+                "recall": 0.9258270781206561,
+                "f1-score": 0.9413194640737181,
+                "support": 17985.0
+            },
+            "1": {
+                "precision": 0.2975250131648236,
+                "recall": 0.4322876817138485,
+                "f1-score": 0.35246412975670616,
+                "support": 1307.0
+            },
+            "accuracy": 0.8923906282396848,
+            "macro avg": {
+                "precision": 0.6274320862983895,
+                "recall": 0.6790573799172523,
+                "f1-score": 0.6468917969152121,
+                "support": 19292.0
+            },
+            "weighted avg": {
+                "precision": 0.9126378796698187,
+                "recall": 0.8923906282396848,
+                "f1-score": 0.9014255224423511,
+                "support": 19292.0
+            }
+        }
+    }
+}
