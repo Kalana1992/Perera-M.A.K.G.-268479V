@@ -1,0 +1,7 @@
+{
+    "model": "Logistic Regression",
+    "optimal_threshold": 0.49999999999999994,
+    "selection_method": "Maximum OOF F1-score",
+    "cross_validation_folds": 5,
+    "random_state": 42
+}

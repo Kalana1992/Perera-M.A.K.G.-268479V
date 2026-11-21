@@ -1,0 +1,52 @@
+{
+    "model": "Logistic Regression with Optimized Threshold",
+    "threshold_selection_method": "Maximum F1-score from 5-fold StratifiedGroupKFold OOF predictions",
+    "selected_threshold": 0.49999999999999994,
+    "random_state": 42,
+    "training_records": 77164,
+    "testing_records": 19292,
+    "oof_precision": 0.117651235444476,
+    "oof_recall": 0.6340156877750144,
+    "oof_f1_score": 0.1984728252732445,
+    "test_default_threshold_0_50": {
+        "precision": 0.12418395473668939,
+        "recall": 0.6549349655700076,
+        "f1_score": 0.20878048780487804
+    },
+    "test_optimized_threshold": {
+        "threshold": 0.49999999999999994,
+        "accuracy": 0.6636947957702675,
+        "precision": 0.12418395473668939,
+        "recall": 0.6549349655700076,
+        "f1_score": 0.20878048780487804,
+        "roc_auc": 0.7107725578507466,
+        "pr_auc": 0.1587744888178691,
+        "classification_report": {
+            "0": {
+                "precision": 0.9636260988789418,
+                "recall": 0.6643313872671671,
+                "f1-score": 0.7864665613480779,
+                "support": 17985.0
+            },
+            "1": {
+                "precision": 0.12418395473668939,
+                "recall": 0.6549349655700076,
+                "f1-score": 0.20878048780487804,
+                "support": 1307.0
+            },
+            "accuracy": 0.6636947957702675,
+            "macro avg": {
+                "precision": 0.5439050268078156,
+                "recall": 0.6596331764185874,
+                "f1-score": 0.49762352457647796,
+                "support": 19292.0
+            },
+            "weighted avg": {
+                "precision": 0.9067553295240836,
+                "recall": 0.6636947957702675,
+                "f1-score": 0.7473293180285173,
+                "support": 19292.0
+            }
+        }
+    }
+}
