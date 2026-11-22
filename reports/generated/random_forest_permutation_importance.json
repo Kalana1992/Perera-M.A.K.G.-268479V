@@ -1,0 +1,134 @@
+{
+    "analysis": "Permutation Feature Importance",
+    "model": "Random Forest Improved Model",
+    "scoring_metric": "average_precision",
+    "baseline_average_precision": 0.28713164710243017,
+    "random_state": 42,
+    "n_repeats": 5,
+    "training_records": 77164,
+    "testing_records": 19292,
+    "test_late_delivery_rate": 0.06774828944640265,
+    "features_analyzed": 20,
+    "feature_importance": [
+        {
+            "rank": 1,
+            "feature": "approval_month",
+            "importance_mean": 0.14618608235539293,
+            "importance_std": 0.0049324698215466554
+        },
+        {
+            "rank": 2,
+            "feature": "customer_state",
+            "importance_mean": 0.12317275725304393,
+            "importance_std": 0.0030637296594961125
+        },
+        {
+            "rank": 3,
+            "feature": "estimated_delivery_lead_days",
+            "importance_mean": 0.05712480110115646,
+            "importance_std": 0.0034352485013702744
+        },
+        {
+            "rank": 4,
+            "feature": "approval_year",
+            "importance_mean": 0.05514295052904149,
+            "importance_std": 0.003923374744154561
+        },
+        {
+            "rank": 5,
+            "feature": "dominant_seller_state",
+            "importance_mean": 0.028329481435134186,
+            "importance_std": 0.002200014912336795
+        },
+        {
+            "rank": 6,
+            "feature": "total_freight_value",
+            "importance_mean": 0.024192102673817484,
+            "importance_std": 0.004152735221162113
+        },
+        {
+            "rank": 7,
+            "feature": "purchase_to_approval_hours",
+            "importance_mean": 0.002957459465714363,
+            "importance_std": 0.0015838001268893324
+        },
+        {
+            "rank": 8,
+            "feature": "avg_product_photos_qty",
+            "importance_mean": 0.002444462502390965,
+            "importance_std": 0.00072897715362144
+        },
+        {
+            "rank": 9,
+            "feature": "item_count",
+            "importance_mean": 0.0020555794189276557,
+            "importance_std": 0.0019468277144191512
+        },
+        {
+            "rank": 10,
+            "feature": "avg_product_weight_g",
+            "importance_mean": 0.0015485636860616658,
+            "importance_std": 0.0011686556165123175
+        },
+        {
+            "rank": 11,
+            "feature": "approval_day_of_week",
+            "importance_mean": 0.0012245446815002613,
+            "importance_std": 0.0009953646883475468
+        },
+        {
+            "rank": 12,
+            "feature": "total_merchandise_value",
+            "importance_mean": 0.0009416364134241073,
+            "importance_std": 0.0032032400466407754
+        },
+        {
+            "rank": 13,
+            "feature": "approval_hour",
+            "importance_mean": 0.0003923405010525238,
+            "importance_std": 0.0013443672295213405
+        },
+        {
+            "rank": 14,
+            "feature": "seller_count",
+            "importance_mean": 0.0001056091130117176,
+            "importance_std": 0.0007052461431413248
+        },
+        {
+            "rank": 15,
+            "feature": "seller_state_count",
+            "importance_mean": 4.1233800537165965e-05,
+            "importance_std": 0.00016775237873606702
+        },
+        {
+            "rank": 16,
+            "feature": "product_category_count",
+            "importance_mean": -0.00020540851036697781,
+            "importance_std": 0.001224991037372792
+        },
+        {
+            "rank": 17,
+            "feature": "avg_product_height_cm",
+            "importance_mean": -0.00027698521283618937,
+            "importance_std": 0.0017902815350803634
+        },
+        {
+            "rank": 18,
+            "feature": "avg_product_length_cm",
+            "importance_mean": -0.00048247043788258727,
+            "importance_std": 0.0013799486000849017
+        },
+        {
+            "rank": 19,
+            "feature": "dominant_product_category",
+            "importance_mean": -0.002173629027992363,
+            "importance_std": 0.0009507503687237531
+        },
+        {
+            "rank": 20,
+            "feature": "avg_product_width_cm",
+            "importance_mean": -0.0025704938098911833,
+            "importance_std": 0.001677938757829954
+        }
+    ]
+}

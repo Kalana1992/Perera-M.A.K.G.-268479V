@@ -166,7 +166,115 @@ Random Forest reduces false alerts to 1,334 and provides higher precision. This 
 
 However, it misses 742 actual late deliveries, so relying exclusively on its alerts could leave a significant proportion of late orders unidentified.
 
-### 8. Model Selection
+### 8. Feature Importance and Model Explainability
+
+Permutation Feature Importance was conducted on the held-out test dataset to
+identify the predictors that contribute most to the Random Forest model's
+predictive performance.
+
+The analysis used Average Precision (PR-AUC) as the scoring metric, with five
+permutation repeats for each of the 20 predictors. The existing fitted Random
+Forest model was loaded and evaluated without retraining.
+
+The baseline Average Precision obtained during this analysis was 0.2871,
+consistent with the previously reported Random Forest evaluation.
+
+#### 8.1 Most Important Predictors
+
+The five highest-ranked predictors were:
+
+| Rank | Predictor | Mean Importance |
+|---:|---|---:|
+| 1 | Approval month | 0.146186 |
+| 2 | Customer state | 0.123173 |
+| 3 | Estimated delivery lead days | 0.057125 |
+| 4 | Approval year | 0.055143 |
+| 5 | Dominant seller state | 0.028329 |
+
+Approval month and customer state showed the largest reductions in Average
+Precision when their values were randomly shuffled. This indicates that
+temporal and geographical information contributes substantially to the
+model's predictive performance.
+
+Estimated delivery lead days and approval year were also influential
+predictors. Dominant seller state and total freight value provided additional
+predictive information.
+
+#### 8.2 Business Interpretation
+
+The feature-importance results provide several useful insights for the
+proposed decision support system:
+
+1. **Temporal patterns:** Approval month was the most influential predictor.
+   This suggests that delivery-risk patterns vary across different months.
+   Seasonal demand, holidays and operational capacity are possible areas for
+   further business investigation.
+
+2. **Customer geography:** Customer state was the second most influential
+   predictor. This highlights the importance of destination geography when
+   assessing delivery risk.
+
+3. **Delivery expectations:** Estimated delivery lead days contributed
+   meaningfully to predictions and may help identify orders with greater
+   delivery-risk exposure.
+
+4. **Seller geography:** Dominant seller state also contributed to model
+   performance, indicating that seller location contains useful predictive
+   information.
+
+5. **Freight value:** Total freight value ranked sixth, suggesting that
+   shipping-related characteristics may provide additional information for
+   delivery-risk assessment.
+
+These findings can help logistics and customer-service teams investigate
+regional and temporal delivery patterns and prioritise operational attention.
+
+#### 8.3 Low and Negative Importance Values
+
+Several predictors showed importance values close to zero. Five predictors
+had negative mean importance values:
+
+- Product category count: -0.000205
+- Average product height: -0.000277
+- Average product length: -0.000482
+- Dominant product category: -0.002174
+- Average product width: -0.002570
+
+Negative values indicate that shuffling these predictors slightly improved
+Average Precision during this experiment. This suggests that they provided
+limited predictive value in the evaluated model and test dataset.
+
+These results do not establish that the features are inherently irrelevant.
+Correlations between predictors, data characteristics and sampling
+variability may influence permutation importance.
+
+#### 8.4 Explainability Limitations
+
+Permutation importance measures the change in model performance when
+individual predictors are shuffled. It identifies predictive contribution
+rather than causal relationships.
+
+The results are specific to the evaluated Random Forest model and historical
+test dataset. Correlated predictors may share or mask importance, and the
+analysis does not establish why a particular order is predicted to be late.
+
+Further investigation using complementary explainability techniques and
+operational validation would be beneficial before deployment.
+
+#### 8.5 Generated Explainability Outputs
+
+The analysis generated the following reproducibility and reporting artefacts:
+
+- `src/models/analyze_random_forest_feature_importance.py`
+- `reports/generated/random_forest_permutation_importance.csv`
+- `reports/generated/random_forest_permutation_importance.json`
+- `reports/figures/random_forest_permutation_importance.png`
+
+The feature-importance chart is available at:
+
+`reports/figures/random_forest_permutation_importance.png`
+
+### 9. Model Selection
 
 Based on the evaluated results, Random Forest is selected as the preferred overall model for the current decision support system.
 
@@ -184,7 +292,7 @@ This is an overall model-selection decision based on the evaluated metrics, not 
 
 If the business places a higher cost on missing late deliveries, Logistic Regression's higher recall may be preferable. The final operational threshold should therefore be informed by the relative costs of false positives and false negatives.
 
-### 9. Limitations and Trade-offs
+### 10. Limitations and Trade-offs
 
 1. **Class imbalance:** Only approximately 6.77% of eligible delivered orders were late. This affects classification performance and makes accuracy alone misleading.
 
@@ -198,9 +306,9 @@ If the business places a higher cost on missing late deliveries, Logistic Regres
 
 6. **Generalisation:** Results are based on a historical Brazilian e-commerce dataset. Further validation is required before applying the model to another platform, country, or operational environment.
 
-7. **Model interpretation:** Random Forest provides a stronger overall predictive result, but additional feature-importance and explainability analysis is needed to understand the main drivers of predicted delivery risk.
+7. **Model interpretation:** Permutation feature importance provides an initial understanding of the main predictive contributors. However, it does not establish causal relationships, and further explainability and operational validation may be required.
 
-### 10. Conclusion
+### 11. Conclusion
 
 The comparative evaluation demonstrates that the Random Forest model outperforms the Logistic Regression baseline on F1-score, precision, ROC-AUC, and PR-AUC when evaluated using their selected classification thresholds.
 
